@@ -4,6 +4,7 @@ body, #root {
   padding: 0;
   height: 100%;
   font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 12px;
   background-color: #edeff1;
   color: #072340;
 }
@@ -43,12 +44,14 @@ body, #root {
 
 .currency-exposure {
   width: 200px;
+  line-height: 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
 }
 
 .currency-colorbox {
   float: left;
   width: 20px;
   height: 20px;
-  margin: 5px;
+  margin: 5px 5px 5px 0px;
   border: 1px solid rgba(0, 0, 0, .2);
 }
