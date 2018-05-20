@@ -1,9 +1,16 @@
-body{
+html,
+body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
   font-family: 'IBM Plex Sans', sans-serif;
+  background-color: #edeff1;
+  color: #072340;
 }
 
 .App {
   text-align: center;
+  height: 100%;
 }
 
 .App-logo {
@@ -18,6 +25,30 @@ body{
   color: white;
 }
 
-.portfolio-preview{
-  background-color: #edeff1;
+.portfolio-preview {
+  height: 100%;
+}
+
+.descHeader{
+  color: #666666;
+}
+
+.descValue{
+  color: #0bb241;
+}
+
+.card-title{
+  text-align: left;
+}
+
+.currency-exposure {
+  width: 200px;
+}
+
+.currency-colorbox {
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  border: 1px solid rgba(0, 0, 0, .2);
 }
