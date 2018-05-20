@@ -13,7 +13,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "start:wiremock": "java -jar wiremock/wiremock-standalone-2.17.0.jar"
+    "start:wiremock": "cd wiremock && java -jar wiremock-standalone-2.17.0.jar"
   },
   "devDependencies": {}
 }
