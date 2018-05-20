@@ -55,3 +55,16 @@ body, #root {
   margin: 5px 5px 5px 0px;
   border: 1px solid rgba(0, 0, 0, .2);
 }
+
+.asset-allocation{
+  text-align: left;
+}
+
+.progress
+{
+  background-color: inherit;
+}
+
+.asset-weight-value {
+  margin-left: 1em;
+}
