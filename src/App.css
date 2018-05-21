@@ -1,5 +1,6 @@
 html,
-body, #root {
+body,
+#root {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -30,16 +31,23 @@ body, #root {
   height: 100%;
 }
 
-.descHeader{
+.descHeader {
   color: #666666;
 }
 
-.descValue{
+.descValue {
   color: #0bb241;
 }
 
-.card-title{
+.card-title {
   text-align: left;
+}
+
+.currency-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 50px 50px 50px;
+  grid-auto-flow: column;
 }
 
 .currency-exposure {
@@ -56,12 +64,11 @@ body, #root {
   border: 1px solid rgba(0, 0, 0, .2);
 }
 
-.asset-allocation{
+.asset-allocation {
   text-align: left;
 }
 
-.progress
-{
+.progress {
   background-color: inherit;
 }
 

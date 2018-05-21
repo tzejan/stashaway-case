@@ -30,11 +30,11 @@ class PortfolioPreview extends Component {
         },
         {
           currency: "MYR",
-          exposure: 5
+          exposure: 1
         },
         {
           currency: "CNY",
-          exposure: 5
+          exposure: 1
         }
       ],
       asset_allocation: [
@@ -95,7 +95,10 @@ class PortfolioPreview extends Component {
         <PortfolioDescription
           portfolio_description={this.state.portfolio_description}
         />
-        <PortfolioComposition />
+        <PortfolioComposition
+          global_currency_exposure={this.state.global_currency_exposure}
+          asset_allocation={this.state.asset_allocation}
+        />
       </div>
     );
   }
