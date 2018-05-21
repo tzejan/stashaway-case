@@ -1,12 +1,9 @@
 import React from "react";
 import CurrencyExposureDisplay from "./CurrencyExposureDisplay";
 import generateRandomColor from "../utils/randomColorGenerator";
+import round1dp from '../utils/round1dp';
 
 const LOWER_LIMIT = 10;
-
-const round1dp = val => {
-  return Math.round(val * 10) / 10;
-};
 
 const processCurrencyExposureData = data => {
   const sortedData = data.sort(function(a, b) {

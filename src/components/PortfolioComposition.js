@@ -8,7 +8,7 @@ const PortfolioComposition = (props) => (
       <h4>Portfolio Composition</h4>
 
       <CurrencyExposure global_currency_exposure={props.global_currency_exposure}/>
-      <PortfolioAssetAllocation/>
+      <PortfolioAssetAllocation asset_allocation={props.asset_allocation}/>
     </div>
   </div>
 );

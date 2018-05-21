@@ -3,15 +3,15 @@ import React from "react";
 const Header = () => (
   <div className="app-header">
     <div className="d-flex justify-content-between">
-      <a className="navbar-brand" href="#">
+      <a className="navbar-brand" href="#home">
         <img src="logo.svg" alt="StashAway Logo" />
       </a>
       <nav className="navbar navbar-expand-lg navbar-dark ">
         <div className="navbar-nav">
-          <a className="nav-item nav-link" href="#">
+          <a className="nav-item nav-link" href="#support">
             Support <span className="sr-only">(current)</span>
           </a>
-          <a className="nav-item nav-link" href="#">
+          <a className="nav-item nav-link" href="#logout">
             Logout
           </a>
         </div>

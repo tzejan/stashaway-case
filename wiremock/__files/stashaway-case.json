@@ -44,6 +44,16 @@
                     "asset_name": "US Equities (Small-Cap, Growth)",
                     "ticker": "VBK",
                     "exposure": 1.2
+                },
+                {
+                    "asset_name": "US Equities (Mid-Cap, Value)",
+                    "ticker": "VOE",
+                    "exposure": 1.2
+                },
+                {
+                    "asset_name": "Convertible bonds",
+                    "ticker": "CWB",
+                    "exposure": 1.2
                 }
             ]
         },
