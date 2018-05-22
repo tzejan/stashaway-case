@@ -1,5 +1,6 @@
 import React from "react";
 import round1dp from "../utils/round1dp";
+import PropTypes from "prop-types";
 
 const getWeightedAssets = (assets, totalAssetValue) => {
   return assets.map(asset => {
@@ -50,6 +51,22 @@ const AssetAllocationGroup = props => {
       ))}
     </React.Fragment>
   );
+};
+
+AssetAllocationGroup.propTypes = {
+  totalAssetValue: PropTypes.number.isRequired,
+  asset_group: PropTypes.shape(
+    {
+      asset_group_name: PropTypes.string.isRequired,
+      assets: PropTypes.arrayOf(
+        PropTypes.shape({
+          asset_name: PropTypes.string.isRequired,
+          ticker: PropTypes.string.isRequired,
+          exposure: PropTypes.number.isRequired
+        })
+      ).isRequired
+    }.isRequired
+  ).isRequired
 };
 
 export default AssetAllocationGroup;

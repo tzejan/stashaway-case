@@ -1,6 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const PortfolioDescription = (props) => (
+const PortfolioDescription = props => (
   <div className="card m-4">
     <div className="card-body">
       <h3>StashAway's standard portfolios:</h3>
@@ -29,5 +30,15 @@ const PortfolioDescription = (props) => (
     </div>
   </div>
 );
+
+PortfolioDescription.propTypes = {
+  portfolio_description: PropTypes.shape(
+    {
+      expected_annual_returns: PropTypes.number.isRequired,
+      VaR: PropTypes.number.isRequired,
+      optimised_currency: PropTypes.string.isRequired
+    }.isRequired
+  ).isRequired
+};
 
 export default PortfolioDescription;

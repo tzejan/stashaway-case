@@ -1,5 +1,6 @@
 import React from "react";
 import AssetAllocationGroup from "./AssetAllocationGroup";
+import PropTypes from "prop-types";
 
 const PortfolioAssetAllocation = props => {
   const totalAssetValue = props.asset_allocation.reduce(
@@ -32,6 +33,23 @@ const PortfolioAssetAllocation = props => {
       </table>
     </div>
   );
+};
+
+PortfolioAssetAllocation.propTypes = {
+  asset_allocation: PropTypes.arrayOf(
+    PropTypes.shape(
+      {
+        asset_group_name: PropTypes.string.isRequired,
+        assets: PropTypes.arrayOf(
+          PropTypes.shape({
+            asset_name: PropTypes.string.isRequired,
+            ticker: PropTypes.string.isRequired,
+            exposure: PropTypes.number.isRequired
+          })
+        )
+      }.isRequired
+    ).isRequired
+  ).isRequired
 };
 
 export default PortfolioAssetAllocation;

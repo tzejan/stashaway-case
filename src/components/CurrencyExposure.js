@@ -1,7 +1,8 @@
 import React from "react";
 import CurrencyExposureDisplay from "./CurrencyExposureDisplay";
 import generateRandomColor from "../utils/randomColorGenerator";
-import round1dp from '../utils/round1dp';
+import round1dp from "../utils/round1dp";
+import PropTypes from "prop-types";
 
 const LOWER_LIMIT = 10;
 
@@ -49,6 +50,17 @@ const CurrencyExposure = props => {
       </div>
     </div>
   );
+};
+
+CurrencyExposure.propTypes = {
+  global_currency_exposure: PropTypes.arrayOf(
+    PropTypes.shape(
+      {
+        currency: PropTypes.string.isRequired,
+        exposure: PropTypes.number.isRequired
+      }.isRequired
+    ).isRequired
+  ).isRequired
 };
 
 export default CurrencyExposure;
