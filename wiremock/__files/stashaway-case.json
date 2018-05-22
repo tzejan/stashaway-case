@@ -58,7 +58,7 @@
             ]
         },
         {
-            "asset_group_name": "International EQUITIES",
+            "asset_group_name": "INTERNATIONAL EQUITIES",
             "assets": [{
                     "asset_name": "Asia ex-Japan Equities",
                     "ticker": "VTI",

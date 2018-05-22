@@ -7,85 +7,19 @@ class PortfolioPreview extends Component {
     super();
     this.state = {
       portfolio_description: {
-        expected_annual_returns: 6.4,
-        VaR: 3.4,
-        optimised_currency: "USD"
+        expected_annual_returns: 0,
+        VaR: 0,
+        optimised_currency: ""
       },
-      global_currency_exposure: [
-        {
-          currency: "USD",
-          exposure: 30
-        },
-        {
-          currency: "SGD",
-          exposure: 30
-        },
-        {
-          currency: "EUR",
-          exposure: 20
-        },
-        {
-          currency: "JPY",
-          exposure: 10
-        },
-        {
-          currency: "MYR",
-          exposure: 1
-        },
-        {
-          currency: "CNY",
-          exposure: 1
-        }
-      ],
-      asset_allocation: [
-        {
-          asset_group_name: "US EQUITIES",
-          assets: [
-            {
-              asset_name: "US Equities (Total)",
-              ticker: "VTI",
-              exposure: 5
-            },
-            {
-              asset_name: "US Equities (Dividends)",
-              ticker: "VIG",
-              exposure: 6
-            },
-            {
-              asset_name: "US Equities (Small-Cap, Growth)",
-              ticker: "VBK",
-              exposure: 1.2
-            }
-          ]
-        },
-        {
-          asset_group_name: "International EQUITIES",
-          assets: [
-            {
-              asset_name: "Asia ex-Japan Equities",
-              ticker: "VTI",
-              exposure: 12.3
-            },
-            {
-              asset_name: "China Equities",
-              ticker: "PGJ",
-              exposure: 0.2
-            },
-            {
-              asset_name: "US Total Stock",
-              ticker: "VBK",
-              exposure: 23.7
-            }
-          ]
-        }
-      ]
+      global_currency_exposure: [],
+      asset_allocation: []
     };
   }
 
   componentDidMount() {
     fetch("http://localhost:8080/api/portfolio")
       .then(response => response.json())
-      .then(jsondata => console.log(jsondata))
+      .then(jsondata => this.setState(jsondata))
       .catch(err => console.log(err));
   }
 

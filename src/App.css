@@ -54,6 +54,7 @@ body,
   width: 200px;
   line-height: 30px;
   border-bottom: 1px solid rgba(0, 0, 0, .2);
+  margin-right: 1em;
 }
 
 .currency-colorbox {
@@ -70,6 +71,8 @@ body,
 
 .progress {
   background-color: inherit;
+  height: 1.25rem;
+  font-size: 1rem;
 }
 
 .asset-weight-value {

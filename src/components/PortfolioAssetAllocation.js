@@ -8,7 +8,6 @@ const PortfolioAssetAllocation = props => {
     0
   );
 
-  console.log(totalAssetValue);
   return (
     <div className="card-body">
       <h5 className="card-title">Asset Allocation</h5>
