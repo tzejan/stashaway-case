@@ -6,13 +6,25 @@ class PortfolioPreview extends Component {
   constructor() {
     super();
     this.state = {
-      portfolio_description: {
-        expected_annual_returns: 0,
-        VaR: 0,
-        optimised_currency: ""
+      new_allocation: {
+        portfolio_description: {
+          expected_annual_returns: 0,
+          VaR: 0,
+          optimised_currency: ""
+        },
+        global_currency_exposure: [],
+        asset_allocation: []
       },
-      global_currency_exposure: [],
-      asset_allocation: []
+      current_allocation: {
+        portfolio_description: {
+          expected_annual_returns: 0,
+          VaR: 0,
+          optimised_currency: ""
+        },
+        global_currency_exposure: [],
+        asset_allocation: []
+      },
+      current_display: "current"
     };
   }
 
@@ -23,15 +35,28 @@ class PortfolioPreview extends Component {
       .catch(err => console.log(err));
   }
 
+  toggleAllocationButton = () => {
+    if (this.state.current_display === "current") {
+      this.setState({ current_display: "new" });
+    } else {
+      this.setState({ current_display: "current" });
+    }
+  }
+
   render() {
+    const allocationToDisplay = this.state.current_display === "new"? this.state.new_allocation : this.state.current_allocation;
     return (
       <div className="portfolio-preview">
         <PortfolioDescription
-          portfolio_description={this.state.portfolio_description}
+          portfolio_description={allocationToDisplay.portfolio_description}
         />
         <PortfolioComposition
-          global_currency_exposure={this.state.global_currency_exposure}
-          asset_allocation={this.state.asset_allocation}
+          global_currency_exposure={
+            allocationToDisplay.global_currency_exposure
+          }
+          asset_allocation={allocationToDisplay.asset_allocation}
+          current_display={this.state.current_display}
+          toggleAllocation={this.toggleAllocationButton}
         />
       </div>
     );

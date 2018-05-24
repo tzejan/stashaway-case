@@ -1,79 +1,160 @@
 {
-    "portfolio_description": {
-        "expected_annual_returns": 6.4,
-        "VaR": 3.4,
-        "optimised_currency": "USD"
+    "new_allocation": {
+        "portfolio_description": {
+            "expected_annual_returns": 6.4,
+            "VaR": 3.4,
+            "optimised_currency": "SGD"
+        },
+        "global_currency_exposure": [{
+                "currency": "USD",
+                "exposure": 50
+            },
+            {
+                "currency": "SGD",
+                "exposure": 50
+            },
+            {
+                "currency": "EUR",
+                "exposure": 20
+            },
+            {
+                "currency": "JPY",
+                "exposure": 10
+            },
+            {
+                "currency": "MYR",
+                "exposure": 5
+            },
+            {
+                "currency": "CNY",
+                "exposure": 3
+            }
+        ],
+        "asset_allocation": [{
+                "asset_group_name": "US EQUITIES",
+                "assets": [{
+                        "asset_name": "US Equities (Total)",
+                        "ticker": "VTI",
+                        "exposure": 5
+                    },
+                    {
+                        "asset_name": "US Equities (Dividends)",
+                        "ticker": "VIG",
+                        "exposure": 6
+                    }, {
+                        "asset_name": "US Equities (Small-Cap, Growth)",
+                        "ticker": "VBK",
+                        "exposure": 1.2
+                    },
+                    {
+                        "asset_name": "US Equities (Mid-Cap, Value)",
+                        "ticker": "VOE",
+                        "exposure": 1.2
+                    },
+                    {
+                        "asset_name": "Convertible bonds",
+                        "ticker": "CWB",
+                        "exposure": 1.2
+                    }
+                ]
+            },
+            {
+                "asset_group_name": "INTERNATIONAL EQUITIES",
+                "assets": [{
+                        "asset_name": "Asia ex-Japan Equities",
+                        "ticker": "VTI",
+                        "exposure": 12.3
+                    },
+                    {
+                        "asset_name": "China Equities",
+                        "ticker": "PGJ",
+                        "exposure": 0.2
+                    }, {
+                        "asset_name": "US Total Stock",
+                        "ticker": "VBK",
+                        "exposure": 23.7
+                    }
+                ]
+            }
+        ]
     },
-    "global_currency_exposure": [{
-            "currency": "USD",
-            "exposure": 30
+    "current_allocation": {
+        "portfolio_description": {
+            "expected_annual_returns": 6.4,
+            "VaR": 3.4,
+            "optimised_currency": "USD"
         },
-        {
-            "currency": "SGD",
-            "exposure": 30
-        },
-        {
-            "currency": "EUR",
-            "exposure": 20
-        },
-        {
-            "currency": "JPY",
-            "exposure": 10
-        },
-        {
-            "currency": "MYR",
-            "exposure": 5
-        },
-        {
-            "currency": "CNY",
-            "exposure": 3
-        }
-    ],
-    "asset_allocation": [{
-            "asset_group_name": "US EQUITIES",
-            "assets": [{
-                    "asset_name": "US Equities (Total)",
-                    "ticker": "VTI",
-                    "exposure": 5
-                },
-                {
-                    "asset_name": "US Equities (Dividends)",
-                    "ticker": "VIG",
-                    "exposure": 6
-                }, {
-                    "asset_name": "US Equities (Small-Cap, Growth)",
-                    "ticker": "VBK",
-                    "exposure": 1.2
-                },
-                {
-                    "asset_name": "US Equities (Mid-Cap, Value)",
-                    "ticker": "VOE",
-                    "exposure": 1.2
-                },
-                {
-                    "asset_name": "Convertible bonds",
-                    "ticker": "CWB",
-                    "exposure": 1.2
-                }
-            ]
-        },
-        {
-            "asset_group_name": "INTERNATIONAL EQUITIES",
-            "assets": [{
-                    "asset_name": "Asia ex-Japan Equities",
-                    "ticker": "VTI",
-                    "exposure": 12.3
-                },
-                {
-                    "asset_name": "China Equities",
-                    "ticker": "PGJ",
-                    "exposure": 0.2
-                }, {
-                    "asset_name": "US Total Stock",
-                    "ticker": "VBK",
-                    "exposure": 23.7
-                }
-            ]
-        }
-    ]
+        "global_currency_exposure": [{
+                "currency": "USD",
+                "exposure": 30
+            },
+            {
+                "currency": "SGD",
+                "exposure": 30
+            },
+            {
+                "currency": "EUR",
+                "exposure": 20
+            },
+            {
+                "currency": "JPY",
+                "exposure": 12
+            },
+            {
+                "currency": "MYR",
+                "exposure": 15
+            },
+            {
+                "currency": "CNY",
+                "exposure": 13
+            }
+        ],
+        "asset_allocation": [{
+                "asset_group_name": "US EQUITIES",
+                "assets": [{
+                        "asset_name": "US Equities (Total)",
+                        "ticker": "VTI",
+                        "exposure": 5
+                    },
+                    {
+                        "asset_name": "US Equities (Dividends)",
+                        "ticker": "VIG",
+                        "exposure": 6
+                    }, {
+                        "asset_name": "US Equities (Small-Cap, Growth)",
+                        "ticker": "VBK",
+                        "exposure": 1.2
+                    },
+                    {
+                        "asset_name": "US Equities (Mid-Cap, Value)",
+                        "ticker": "VOE",
+                        "exposure": 1.2
+                    },
+                    {
+                        "asset_name": "Convertible bonds",
+                        "ticker": "CWB",
+                        "exposure": 1.2
+                    }
+                ]
+            },
+            {
+                "asset_group_name": "INTERNATIONAL EQUITIES",
+                "assets": [{
+                        "asset_name": "Asia ex-Japan Equities",
+                        "ticker": "VTI",
+                        "exposure": 12.3
+                    },
+                    {
+                        "asset_name": "China Equities",
+                        "ticker": "PGJ",
+                        "exposure": 0.2
+                    }, {
+                        "asset_name": "US Total Stock",
+                        "ticker": "VBK",
+                        "exposure": 23.7
+                    }
+                ]
+            }
+        ]
+    }
 }
