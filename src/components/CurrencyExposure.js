@@ -7,24 +7,24 @@ import PropTypes from "prop-types";
 const LOWER_LIMIT = 10;
 
 const processCurrencyExposureData = data => {
-  const sortedData = data.sort(function(a, b) {
-    return b.exposure - a.exposure;
-  });
-  let groupedData = sortedData.filter(data => data.exposure >= LOWER_LIMIT);
-  let otherWeightage = sortedData
-    .filter(data => data.exposure < LOWER_LIMIT)
-    .reduce((acc, data) => acc + data.exposure, 0);
-  groupedData.push({ currency: "Others", exposure: otherWeightage });
-  const totalExposure = groupedData.reduce(
-    (acc, data) => acc + data.exposure,
-    0
-  );
-  const processedData = groupedData.map(data => {
+  const totalExposure = data.reduce((acc, data) => acc + data.exposure, 0);
+
+  const sortedData = data.sort((a, b) => b.exposure - a.exposure);
+
+  const percentData = sortedData.map(data => {
     return {
       currency: data.currency,
       percent: round1dp(data.exposure * 100 / totalExposure)
     };
   });
+
+  let processedData = percentData.filter(data => data.percent >= LOWER_LIMIT);
+  if (percentData.some(data => data.percent < LOWER_LIMIT)) {
+    let otherWeightage = percentData
+      .filter(data => data.percent < LOWER_LIMIT)
+      .reduce((acc, data) => acc + data.percent, 0);
+    processedData.push({ currency: "Others", percent: otherWeightage });
+  }
 
   return processedData;
 };
